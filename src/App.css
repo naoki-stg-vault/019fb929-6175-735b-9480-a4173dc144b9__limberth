@@ -918,6 +918,85 @@
 }
 
 /* ============================================================
+   Franja con foto de fondo
+   ============================================================ */
+
+.banda {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(320px, 46vw, 520px);
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  overflow: hidden;
+  background: var(--bosque);
+  text-align: center;
+}
+
+.banda__fondo {
+  position: absolute;
+  inset: 0;
+}
+
+.banda__fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.banda__fondo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46, 59, 51, 0.72), rgba(46, 59, 51, 0.55));
+}
+
+.banda__contenido {
+  position: relative;
+  max-width: 640px;
+  color: #f2ece1;
+}
+
+.banda__contenido h2 {
+  color: var(--crema);
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  margin-bottom: 1rem;
+}
+
+.banda__contenido p {
+  color: rgba(242, 236, 225, 0.85);
+}
+
+/* ============================================================
+   Galería
+   ============================================================ */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.galeria__item {
+  margin: 0;
+  border-radius: var(--radio);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--sombra-suave);
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galeria__item:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 

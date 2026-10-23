@@ -6,6 +6,8 @@ import {
   hero,
   servicios,
   beneficios,
+  banda,
+  galeria,
   sobreIsel,
   pasos,
   testimonios,
@@ -130,7 +132,7 @@ function App() {
             <div className="hero__visual">
               <div className="hero__marco">
                 {negocio.fotoHero ? (
-                  <img src={negocio.fotoHero} alt={`Espacio de masajes de ${negocio.nombre}`} />
+                  <img src={negocio.fotoHero} alt={`Masaje relajante en ${negocio.nombre}`} />
                 ) : (
                   <div className="hero__placeholder">
                     <span className="hero__placeholder-icono" aria-hidden="true">
@@ -206,13 +208,43 @@ function App() {
           </div>
         </section>
 
+        {/* ---------- BANDA CON FOTO ---------- */}
+        <section className="banda">
+          <div className="banda__fondo" aria-hidden="true">
+            {negocio.fotoBanda && <img src={negocio.fotoBanda} alt="" />}
+          </div>
+          <div className="contenedor banda__contenido">
+            <p className="etiqueta etiqueta--clara">{banda.etiqueta}</p>
+            <h2>{banda.titulo}</h2>
+            <p>{banda.texto}</p>
+          </div>
+        </section>
+
+        {/* ---------- GALERÍA ---------- */}
+        <section className="seccion">
+          <div className="contenedor">
+            <div className="seccion__cabecera seccion__cabecera--centrada">
+              <p className="etiqueta">{galeria.etiqueta}</p>
+              <h2>{galeria.titulo}</h2>
+              <p className="seccion__intro">{galeria.intro}</p>
+            </div>
+            <div className="galeria">
+              {negocio.galeria.map((foto) => (
+                <figure className="galeria__item" key={foto.src}>
+                  <img src={foto.src} alt={foto.alt} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ---------- SOBRE ISEL ---------- */}
         <section className="seccion seccion--bosque" id="sobre">
           <div className="contenedor sobre">
             <div className="sobre__visual">
               <div className="sobre__marco">
                 {negocio.fotoIsel ? (
-                  <img src={negocio.fotoIsel} alt={`${negocio.nombre}, masajista`} />
+                  <img src={negocio.fotoIsel} alt={`${negocio.nombre}, masajista`} loading="lazy" />
                 ) : (
                   <div className="sobre__placeholder">
                     <strong>Foto de Isel</strong>

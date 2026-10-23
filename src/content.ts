@@ -25,10 +25,40 @@ export const negocio = {
   whatsappNumero: '',
   whatsappMensaje: '¡Hola Isel! Me gustaría reservar un masaje relajante.',
 
-  // Fotos: sube la imagen a la carpeta public/ y escribe aquí la ruta.
-  // Ejemplo: '/espacio.jpg'  o  '/isel.jpg'
-  fotoHero: '',
-  fotoIsel: '',
+  // ------------------------------------------------------------
+  //  FOTOS
+  // ------------------------------------------------------------
+  //  IMPORTANTE: las fotos que se ven ahora son de banco de
+  //  imágenes (Unsplash) y son TEMPORALES. Están puestas solo
+  //  para que la página se vea terminada. Cuando tengas las
+  //  fotos reales de Isel y del espacio, sustitúyelas así:
+  //    1) sube tus imágenes a la carpeta public/
+  //    2) escribe aquí la ruta, por ejemplo '/espacio.jpg'
+  //  Si dejas una cadena vacía (''), vuelve el recuadro de aviso.
+  // ------------------------------------------------------------
+  fotoHero:
+    'https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?auto=format&fit=crop&w=1200&q=80',
+  fotoIsel:
+    'https://images.unsplash.com/photo-1745327883508-b6cd32e5dde5?auto=format&fit=crop&w=1000&q=80',
+  fotoBanda:
+    'https://images.unsplash.com/photo-1745327883290-1e9c6447b938?auto=format&fit=crop&w=1800&q=80',
+  galeria: [
+    {
+      src: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=80',
+      alt: 'Masaje con piedras calientes',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1620733723572-11c53f73a416?auto=format&fit=crop&w=900&q=80',
+      alt: 'Aceites, toallas y velas encendidas',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1772378452022-94ee7971fe80?auto=format&fit=crop&w=900&q=80',
+      alt: 'Sala de masajes preparada para una sesión',
+    },
+  ],
+  // Nota visible solo en el código: recuerda que estas fotos no son de Isel.
+  creditosFotos:
+    'Fotos temporales de Unsplash (banco de imágenes). Sustituir por las fotos reales de Isel y del espacio.',
 }
 
 export const enlaces = [
@@ -125,6 +155,20 @@ export const beneficios = [
     texto: 'Sin pantallas ni prisas. Solo tu cuerpo, tu respiración y el silencio.',
   },
 ]
+
+// Franja ancha con foto de fondo (después de los beneficios).
+export const banda = {
+  etiqueta: 'El espacio',
+  titulo: 'Un rincón pensado para desconectar',
+  texto:
+    'Luz cálida, silencio y todo preparado antes de que llegues. Aquí no hay prisa: el tiempo es tuyo.',
+}
+
+export const galeria = {
+  etiqueta: 'Detalles',
+  titulo: 'Así se siente Armonía',
+  intro: 'Piedras calientes, aceites, velas y una sala lista para recibirte.',
+}
 
 export const sobreIsel = {
   etiqueta: 'Quién te atiende',
