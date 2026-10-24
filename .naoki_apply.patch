@@ -1,0 +1,15 @@
+--- a/src/content.ts
++++ b/src/content.ts
+@@ -88,6 +88,13 @@
+   botonPrincipal: 'Reservar mi masaje',
+   botonSecundario: 'Ver servicios',
+   sellos: ['Aceites tibios', 'Ambiente silencioso', 'Atención personalizada'],
++
++  // Tarjeta flotante que se ve sobre la foto de portada.
++  // El número es un rango porque las sesiones van de 30 a 90 minutos.
++  tarjeta: {
++    numero: '30–90',
++    texto: 'minutos',
++    subtexto: 'según lo que necesites',
++  },
+ }

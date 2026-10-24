@@ -144,10 +144,10 @@ function App() {
                 )}
               </div>
               <div className="hero__tarjeta">
-                <span className="hero__tarjeta-numero">60</span>
+                <span className="hero__tarjeta-numero">{hero.tarjeta.numero}</span>
                 <span className="hero__tarjeta-texto">
-                  minutos
-                  <small>para desconectar del todo</small>
+                  {hero.tarjeta.texto}
+                  <small>{hero.tarjeta.subtexto}</small>
                 </span>
               </div>
             </div>

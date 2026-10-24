@@ -77,6 +77,14 @@ export const hero = {
   botonPrincipal: 'Reservar mi masaje',
   botonSecundario: 'Ver servicios',
   sellos: ['Aceites tibios', 'Ambiente silencioso', 'Atención personalizada'],
+
+  // Tarjeta flotante que se ve sobre la foto de portada.
+  // El número es un rango porque las sesiones van de 30 a 90 minutos.
+  tarjeta: {
+    numero: '30–90',
+    texto: 'minutos',
+    subtexto: 'según lo que necesites',
+  },
 }
 
 export type Servicio = {
