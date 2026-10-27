@@ -109,11 +109,11 @@ function App() {
 
               <div className="hero__acciones">
                 {enlaceWhatsapp ? (
-                  <a className="boton" href={enlaceWhatsapp} target="_blank" rel="noreferrer">
+                  <a className="boton boton--rojo" href={enlaceWhatsapp} target="_blank" rel="noreferrer">
                     {hero.botonPrincipal}
                   </a>
                 ) : (
-                  <a className="boton" href="#contacto">
+                  <a className="boton boton--rojo" href="#contacto">
                     {hero.botonPrincipal}
                   </a>
                 )}

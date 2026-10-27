@@ -120,6 +120,16 @@
   color: var(--bosque);
 }
 
+.boton--rojo {
+  background: var(--rojo);
+  color: var(--crema);
+}
+
+.boton--rojo:hover {
+  background: var(--rojo-oscuro);
+  color: var(--crema);
+}
+
 /* ---------- Marcador de dato pendiente ---------- */
 
 .marcador {
